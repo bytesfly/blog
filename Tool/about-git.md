@@ -184,10 +184,9 @@ ssh -T git@github.com
 ## git对某个项目单独设置用户名/邮箱
 1. 进入项目.git文件夹，然后执行如下命令分别设置用户名和邮箱
 ```bash
-git config user.name "itwild"
-git config user.email "itwild@example.com"
-
-# 使用vim作为编辑器
+git config user.name "bytesfly"
+git config user.email "bytesfly@example.com"
+#使用vim作为编辑器
 git config --global core.editor "vim"
 ```
 2. 然后可以查看生成的config文件

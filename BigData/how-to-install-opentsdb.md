@@ -32,7 +32,7 @@
 - `conf/hbase-env.sh`文件
 
 ```bash
-# The java implementation to use.
+#The java implementation to use.
 export JAVA_HOME=/usr/jdk64/jdk1.8.0_112
 ```
 - `conf/hbase-site.xml`文件
@@ -67,29 +67,24 @@ export JAVA_HOME=/usr/jdk64/jdk1.8.0_112
 
 2. 在交互界面里我们依次执行下面4条建表(table)语句
 ```bash
-# opentsdb中那些metric数据就存在这张表中
-# 这张表数据会很大，考虑到读写效率，我们注意到这张表就一个列族
+#opentsdb中那些metric数据就存在这张表中
+#这张表数据会很大，考虑到读写效率，我们注意到这张表就一个列族
 create 'tsdb',{NAME => 't', VERSIONS => 1, BLOOMFILTER => 'ROW'}
-
-# opentsdb中建立metric name、tagK、tagV字面量与uid一一对应的表
-# opentsdb不会存储实际的字符串字面值
-# 比如system.cpu.util的metric，会将system.cpu.util转化为id(默认自增，后面介绍部分源码的时候会有讲到)后，存入HBase
-# 这张表有id、name两个列族，可通过id找到name，也可以通过name找到id
+#opentsdb中建立metric name、tagK、tagV字面量与uid一一对应的表
+#opentsdb不会存储实际的字符串字面值
+#比如system.cpu.util的metric，会将system.cpu.util转化为id(默认自增，后面介绍部分源码的时候会有讲到)后，存入HBase
+#这张表有id、name两个列族，可通过id找到name，也可以通过name找到id
 create 'tsdb-uid',{NAME => 'id', BLOOMFILTER => 'ROW'},{NAME => 'name', BLOOMFILTER => 'ROW'}
-
-# 下面两张表暂时可不必太关心，先创建出来就好
+#下面两张表暂时可不必太关心，先创建出来就好
 create 'tsdb-tree',{NAME => 't', VERSIONS => 1, BLOOMFILTER => 'ROW'}
 create 'tsdb-meta',{NAME => 'name', BLOOMFILTER => 'ROW'}
 ```
 
-注意一下，这里的建表语句我有意把`压缩`(`COMPRESSION`)选项去掉了，因为存储用的是本地文件系统，有些压缩可能是不支持的，生产环境使用`HDFS`的建表语句可能是这样的
+注意一下，这里的建表语句我有意把压缩(`COMPRESSION`)选项去掉了，因为存储用的是本地文件系统，有些压缩可能是不支持的，生产环境使用`HDFS`的建表语句可能是这样的
 ```bash
 create 'tsdb',{NAME => 't', VERSIONS => 1, BLOOMFILTER => 'ROW', COMPRESSION => 'SNAPPY'}
-
 create 'tsdb-uid',{NAME => 'id', BLOOMFILTER => 'ROW', COMPRESSION => 'SNAPPY'},{NAME => 'name', BLOOMFILTER => 'ROW', COMPRESSION => 'SNAPPY'}
-
 create 'tsdb-tree',{NAME => 't', VERSIONS => 1, BLOOMFILTER => 'ROW', COMPRESSION => 'SNAPPY'}
-
 create 'tsdb-meta',{NAME => 'name', BLOOMFILTER => 'ROW', COMPRESSION => 'SNAPPY'}
 ```
 
@@ -144,20 +139,20 @@ tsd.http.staticroot = /usr/share/opentsdb/static/
 tsd.http.cachedir = /tmp/opentsdb
 tsd.core.auto_create_metrics = true
 tsd.core.plugin_path = /usr/share/opentsdb/plugins
-# zookeeper的地址，即hbase依赖的zookeeper的地址，localhost:2181,localhost:2182,localhost:2183
+#zookeeper的地址，即hbase依赖的zookeeper的地址，localhost:2181,localhost:2182,localhost:2183
 tsd.storage.hbase.zk_quorum = localhost:2181
 tsd.storage.fix_duplicates = true
 tsd.http.request.enable_chunked = true
 tsd.http.request.max_chunk = 4096000
 tsd.storage.max_tags = 16
-# 这里看到了我们上面在hbase中创建的4张表
+#这里看到了我们上面在hbase中创建的4张表
 tsd.storage.hbase.data_table = tsdb
 tsd.storage.hbase.uid_table = tsdb-uid
 tsd.storage.hbase.tree_table = tsdb-tree
 tsd.storage.hbase.meta_table = tsdb-meta
-# 下面几个配置项到部分源码解析的时候会有介绍，暂时可以先忽略
-# tsd.query.skip_unresolved_tagvs = true
-# hbase.rpc.timeout = 120000
+#下面几个配置项到部分源码解析的时候会有介绍，暂时可以先忽略
+#tsd.query.skip_unresolved_tagvs = true
+#hbase.rpc.timeout = 120000
 ```
 - 启动opentsdb，`systemctl start opentsdb`，成功的话，就可以打开opentsdb的界面了`http://localhost:4242/`
 
