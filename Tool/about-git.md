@@ -129,19 +129,19 @@ git submodule foreach 'git diff'
 日常工作中会遇到公司有个gitlab，还有些自己的一些项目放在github上。这样就导致我们要配置不同的ssh-key对应不同的环境。具体操作如下：
 
 1. 生成一个公司用的SSH-Key
-```sh
+```bash
 ssh-keygen -t rsa -C "youremail@yourcompany.com" -f ~/.ssh/gitlab-rsa
 ```
 在~/.ssh/目录会生成gitlab-rsa和gitlab-rsa.pub私钥和公钥。 我们将gitlab-rsa.pub中的内容粘帖到公司gitlab服务器的SSH-key的配置中。
 
 2. 生成一个github用的SSH-Key
-```sh
+```bash
 ssh-keygen -t rsa -C "youremail@your.com" -f ~/.ssh/github-rsa
 ```
 在~/.ssh/目录会生成github-rsa和github-rsa.pub私钥和公钥。 我们将github-rsa.pub中的内容粘帖到github服务器的SSH-key的配置中。
 
 3. 添加私钥
-```sh
+```bash
 ssh-add ~/.ssh/gitlab-rsa
 ssh-add ~/.ssh/github-rsa
 ```
@@ -154,8 +154,9 @@ ssh-add -D
 ```
 
 4. 修改配置文件  
-   在 ~/.ssh 目录下新建一个config文件
-```sh
+   
+在 ~/.ssh 目录下新建一个config文件
+```bash
 touch config
 ```
 添加内容：
@@ -171,11 +172,11 @@ Host github.com
     PreferredAuthentications publickey
     IdentityFile ~/.ssh/github-rsa
 ```
+
 5. 测试
 ```bash
 # test your company gitlab
 ssh -T git@yourcompany.com
-
 # test github
 ssh -T git@github.com
 ```
@@ -190,7 +191,7 @@ git config user.email "itwild@example.com"
 git config --global core.editor "vim"
 ```
 2. 然后可以查看生成的config文件
-```sh
+```bash
 cat config
 ```
 

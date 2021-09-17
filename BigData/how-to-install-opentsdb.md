@@ -31,12 +31,12 @@
 
 - `conf/hbase-env.sh`文件
 
-```sh
+```bash
 # The java implementation to use.
 export JAVA_HOME=/usr/jdk64/jdk1.8.0_112
 ```
 - `conf/hbase-site.xml`文件
-```sh
+```xml
 <configuration>
   <property>
     <!-- hbase实际存放数据地方，这里是本地文件系统，生产环境一般HDFS地址，例如hdfs://namenode.example.org:8020/hbase -->
@@ -63,10 +63,10 @@ export JAVA_HOME=/usr/jdk64/jdk1.8.0_112
 
 ## 在HBase中创建表结构
 
-1. 执行`bin/hbase shell`进入一个交互的界面 (这里我们也可以类比执行mysql -uXXX -pXXX后进入)
+1. 执行`bin/hbase shell`进入一个交互的界面 (这里我们也可以类比执行`mysql -uXXX -pXXX`后进入)
 
 2. 在交互界面里我们依次执行下面4条建表(table)语句
-```sh
+```bash
 # opentsdb中那些metric数据就存在这张表中
 # 这张表数据会很大，考虑到读写效率，我们注意到这张表就一个列族
 create 'tsdb',{NAME => 't', VERSIONS => 1, BLOOMFILTER => 'ROW'}
@@ -83,7 +83,7 @@ create 'tsdb-meta',{NAME => 'name', BLOOMFILTER => 'ROW'}
 ```
 
 注意一下，这里的建表语句我有意把`压缩`(`COMPRESSION`)选项去掉了，因为存储用的是本地文件系统，有些压缩可能是不支持的，生产环境使用`HDFS`的建表语句可能是这样的
-```sh
+```bash
 create 'tsdb',{NAME => 't', VERSIONS => 1, BLOOMFILTER => 'ROW', COMPRESSION => 'SNAPPY'}
 
 create 'tsdb-uid',{NAME => 'id', BLOOMFILTER => 'ROW', COMPRESSION => 'SNAPPY'},{NAME => 'name', BLOOMFILTER => 'ROW', COMPRESSION => 'SNAPPY'}
@@ -94,7 +94,7 @@ create 'tsdb-meta',{NAME => 'name', BLOOMFILTER => 'ROW', COMPRESSION => 'SNAPPY
 ```
 
 -  在hbase shell的交互界面中执行`list`，即可看到上面创建的4张表
-```sh
+```bash
 hbase(main):004:0> list
 TABLE
 tsdb
@@ -116,7 +116,7 @@ tsdb-uid
 - 把opentsdb的服务注册为系统服务，即可以用`systemctl status/start/stop/restart opentsdb`来查看控制
 
 `vi  /usr/lib/systemd/system/opentsdb.service`添加以下内容
-```sh
+```bash
 [Unit]
 
 Description=OpenTSDB Service
@@ -138,7 +138,7 @@ Restart=on-abort
 > 注意一下，默认opentsdb配置文件目录：/etc/opentsdb/opentsdb.conf，默认opentsdb日志目录：/var/log/opentsdb
 
 - 修改`/etc/opentsdb/opentsdb.conf`配置文件
-```sh
+```bash
 tsd.network.port = 4242
 tsd.http.staticroot = /usr/share/opentsdb/static/
 tsd.http.cachedir = /tmp/opentsdb
