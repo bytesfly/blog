@@ -12,7 +12,7 @@
 <br>
 
 [GitHub](https://github.com/bytesfly/blog)
-[开始阅读](/README.md)
+[开始阅读](README.md)
 
 
 

@@ -102,7 +102,8 @@ jupyter notebook
 这里顺便贴一下`conda`一些常用命令：
 
 - 虚拟环境管理
-```sh
+
+```bash
 # 创建环境，后面的python=3.6是指定python的版本
 conda create --name env_name python=3.6
 
@@ -127,8 +128,10 @@ conda env export > environment.yml
 # 别人在自己本地使用yml文件创建虚拟环境
 conda env create -f environment.yml
 ```
+
 - 包管理
-```sh
+
+```bash
 # 列出当前环境下所有安装的包
 conda list
 
