@@ -10,7 +10,7 @@
 
 部署可参考： [https://docsify.js.org/#/zh-cn/deploy](https://docsify.js.org/#/zh-cn/deploy)  
 
-在已经有了诸如 [博客园](https://www.cnblogs.com/bytesfly) 之类的平台，还需要本站是因为放在`GitHub`上托管，可以使用`Git`追踪博客内容的变更。
+在已经有了诸如 [博客园](https://www.cnblogs.com/bytesfly) 之类的平台，还需要本站是因为放在`GitHub`上托管，可以使用`Git`追踪博客内容的变更，就像维护代码一样，更加清晰明了，数据也不会丢失。
 
 ## 📚 Blog
 
