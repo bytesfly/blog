@@ -12,7 +12,7 @@
 
 - [Flink流处理基础](BigData/flink-stream-processing-theory.md)
 - [Flink把数据sink到kafka多个topic](BigData/flink-kafka-sink-multiple-topics.md)
- 
+
 - [centos7安装部署opentsdb2.4.0](BigData/how-to-install-opentsdb.md)
 - [opentsdb探索之路——部分设计与实现](BigData/the-road-of-exploring-opentsdb.md)
 
@@ -74,6 +74,7 @@
 
 ## 工具
 
+- [使用GitHub Pages + docsify快速搭建一个站点](Tool/github-page-docsify.md)
 - [一文学会在Markdown中编辑数学符号与公式](Tool/markdown-formula.md)
 - [百闻不如一试——公式图片转Latex代码](Tool/image-to-latex.md)
   
