@@ -63,7 +63,7 @@
 
 - **微信公众号：** 字节飞扬（扫码关注我呀）
 
-  <div ><img src="https://images.cnblogs.com/cnblogs_com/itwild/1650404/o_200308064112wechat-run.jpeg" width="200" height="200" /></div>
+  <div ><img src="https://img2020.cnblogs.com/blog/1546632/202109/1546632-20210923090812528-762106506.png" width="200" height="200" /></div>
 
 博客内容仅是个人的笔记与总结，有错误之处还请多多指正，欢迎来 [博客园](https://www.cnblogs.com/bytesfly) 讨论！
 
