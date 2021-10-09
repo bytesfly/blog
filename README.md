@@ -110,3 +110,6 @@
 
 **栈和队列**
 - [有效的括号](LeetCode/0020-valid-parentheses.md)
+
+**数组**
+- [移除元素](LeetCode/0027-remove-element.md)
