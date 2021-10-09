@@ -113,3 +113,7 @@
 
 **数组**
 - [移除元素](LeetCode/0027-remove-element.md)
+
+**数学**
+- [只出现一次的数字](LeetCode/0136-single-number.md)
+

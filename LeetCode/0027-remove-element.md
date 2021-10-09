@@ -56,3 +56,59 @@ for (int i = 0; i < len; i++) {
 - 0 <= nums.length <= 100
 - 0 <= nums[i] <= 50
 - 0 <= val <= 100
+
+## 分析
+
+<!-- 这里可写通用的实现逻辑 -->
+
+顺序遍历数组，遇到可以删除的元素直接扔到数组的末尾，这样数组前面的元素就是保留下来的。
+
+## 实现
+
+<!-- tabs:start -->
+
+### **Java**
+
+<!-- 这里可写当前语言的特殊实现逻辑 -->
+
+```java
+class Solution {
+    public int removeElement(int[] nums, int val) {
+        int i = 0;
+        int j = nums.length - 1;
+        while (i <= j) {
+            if (nums[i] != val) {
+                i++;
+            } else {
+                int temp = nums[j];
+                nums[j] = nums[i];
+                nums[i] = temp;
+
+                j--;
+            }
+        }
+        return i;
+    }
+}
+```
+
+### **Python3**
+
+<!-- 这里可写当前语言的特殊实现逻辑 -->
+
+```python
+class Solution:
+    def removeElement(self, nums: List[int], val: int) -> int:
+        i = 0
+        j = len(nums) - 1
+        while i <= j:
+            if nums[i] != val:
+                i += 1
+            else:
+                nums[i], nums[j] = nums[j], nums[i]
+                j -= 1
+
+        return i
+```
+
+<!-- tabs:end -->
