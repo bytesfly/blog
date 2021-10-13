@@ -108,6 +108,7 @@
 **二叉树**
 - [对称二叉树](LeetCode/0101-symmetric-tree.md)
 - [二叉树的前序遍历](LeetCode/0144-binary-tree-preorder-traversal.md)
+- [二叉树的中序遍历](LeetCode/0094-binary-tree-inorder-traversal.md)
 
 **栈和队列**
 - [有效的括号](LeetCode/0020-valid-parentheses.md)
