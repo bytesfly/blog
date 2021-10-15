@@ -32,6 +32,9 @@
 **机器学习:**
 - [从线性回归走进机器学习](AI/linear-regression.md)
 
+**深度学习:**
+- [PyTorch中backward()函数的gradient参数作用](AI/why-need-gradient-arg-in-pytorch-backward.md)
+
 
 ## MySQL
 
