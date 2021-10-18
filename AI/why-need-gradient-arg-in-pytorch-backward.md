@@ -147,28 +147,7 @@ $$
 答案是由`PyTorch`的`backward`函数的`gradient`参数提供。这就是`gradient`参数的作用。
 
 比如，我们传入`gradient`参数为`torch.tensor([0.1, 0.2, 0.3], dtype=torch.float)`，并且假定$x_1=1$,$x_2=2$,$x_3=3$，按照上面的推导方法：
-$$
-\begin{split}
-    [\frac{\partial A}{\partial x_1},\frac{\partial A}{\partial x_2},\frac{\partial A}{\partial x_3}]
-    &=[\frac{\partial A}{\partial y_1},\frac{\partial A}{\partial y_2},\frac{\partial A}{\partial y_3}]
-   \left[
-   \begin{matrix}
-   x_2x_3 & x_1x_3 & x_1x_2 \\
-   1      & 1      & 1      \\
-   1      & x_3    & x_2
-   \end{matrix}
-   \right]
-   &=[0.1,0.2,0.3]
-   \left[
-   \begin{matrix}
-   6 & 3 & 2 \\
-   1 & 1 & 1 \\
-   1 & 3 & 2
-   \end{matrix}
-   \right]
-   &=[1.1,1.4,1.0]
-\end{split}
-$$
+![](https://img2020.cnblogs.com/blog/1546632/202110/1546632-20211018142917485-127081114.png)
 
 紧接着可以用代码验证一下：
 ```python
