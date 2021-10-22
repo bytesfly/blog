@@ -104,6 +104,8 @@
 
 **动态规划:**
 - [爬楼梯](LeetCode/0070-climbing-stairs.md)
+- [跳跃游戏](LeetCode/0055-jump-game.md)
+- [跳跃游戏 II](LeetCode/0045-jump-game-ii.md)
 
 **链表:**
 - [反转链表](LeetCode/0206-reverse-linked-list.md)

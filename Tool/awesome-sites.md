@@ -108,6 +108,8 @@ github镜像：[https://hub.fastgit.org/](https://hub.fastgit.org/)
 
 ### 在线工具
 
+词云工具：[https://wordart.com/](https://wordart.com/)
+
 360查字体：[https://fonts.safe.360.cn/](https://fonts.safe.360.cn/)
 
 代码在线运行：[https://tool.lu/coderunner](https://tool.lu/coderunner)
