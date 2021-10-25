@@ -95,6 +95,7 @@
 
 - [请用一句话证明你是程序员](Life/how-to-prove-that-you-are-a-programmer.md)
 - [工作中如何做好技术积累](Life/study-vs-work.md)
+- [程序员的谎言](Life/what-are-the-most-common-lies-told-by-programmers.md)
 
 ## 面试题
 
