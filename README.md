@@ -105,6 +105,7 @@
 
 **动态规划:**
 - [爬楼梯](LeetCode/0070-climbing-stairs.md)
+- [使用最小花费爬楼梯](LeetCode/0746-min-cost-climbing-stairs.md)
 
 **贪心算法:**
 - [跳跃游戏](LeetCode/0055-jump-game.md)
