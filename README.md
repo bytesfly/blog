@@ -105,6 +105,8 @@
 
 **动态规划:**
 - [爬楼梯](LeetCode/0070-climbing-stairs.md)
+
+**贪心算法:**
 - [跳跃游戏](LeetCode/0055-jump-game.md)
 - [跳跃游戏 II](LeetCode/0045-jump-game-ii.md)
 

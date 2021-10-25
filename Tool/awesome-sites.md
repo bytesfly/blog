@@ -30,6 +30,8 @@ SegmentFault论坛：[https://segmentfault.com/](https://segmentfault.com/)
 
 周志明：[https://icyfenix.cn/](https://icyfenix.cn/)
 
+代码随想录： [https://programmercarl.com/](https://programmercarl.com/)
+
 皮皮鲁的科技星球(高性能计算、大数据和机器学习)：[https://lulaoshi.info/](https://lulaoshi.info/)
 
 James D Bloom - Blog：[https://jamesdbloom.com/](https://jamesdbloom.com/)
