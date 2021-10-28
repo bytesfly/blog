@@ -2,7 +2,7 @@
 
 原文链接： [https://lulaoshi.info/machine-learning/linear-model/maximum-likelihood-estimation](https://lulaoshi.info/machine-learning/linear-model/maximum-likelihood-estimation)
 
-前文 [从线性回归走进机器学习](linear-regression.md) 介绍了线性回归以及最小二乘法的数学推导过程。
+前文 [从线性回归走进机器学习](AI/linear-regression.md) 介绍了线性回归以及最小二乘法的数学推导过程。
 
 对于一组训练数据，使用线性回归建模，可以有不同的模型参数来描述数据，这时候可以用最小二乘法来选择最优参数来拟合训练数据，即使用误差的平方作为损失函数。
 
