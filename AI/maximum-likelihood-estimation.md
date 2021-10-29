@@ -116,3 +116,70 @@ $$
 y^{(i)} = \epsilon^{(i)} + \sum_{j=1}^n w_jx_{j}^{(i)} =\epsilon^{(i)} + \boldsymbol{w}^\top \boldsymbol{x}^{(i)}
 $$
 
+线性回归的一大假设是：误差服从均值为0的正态分布，且多个观测数据之间互不影响，相互独立。正态分布（高斯分布）的概率密度公式如下面公式，根据正态分布的公式，可以得到$\epsilon$的概率密度。
+
+假设$x$服从正态分布，它的均值为$\mu$，方差为$\sigma$，它的概率密度公式如下。公式左侧的$P(x ; \mu, \sigma)$表示$x$是随机变量，$;$分号强调$\mu$和$\sigma$不是随机变量，而是这个概率密度函数的参数。条件概率函数中使用的$|$竖线有明确的意义，$P(y|x)$表示给定$x$（Given $x$），$y$发生的概率（Probability of $y$）。
+$$
+P(x ; \mu, \sigma) = \frac{1}{\sqrt{2 \pi \sigma^2}}\exp{({-\frac{(x - \mu)^2}{2 \sigma^2}})}
+$$
+
+既然误差项服从正态分布，那么：
+
+$$
+P(\epsilon^{(i)}) = \frac{1}{\sqrt{2 \pi \sigma^2}}\exp{({-\frac{(\epsilon^{(i)})^2}{2 \sigma^2}})}
+$$
+
+由于$\epsilon^{(i)} = y^{(i)} - \boldsymbol{w}^\top \boldsymbol{x}^{(i)}$，并取均值$\mu$为0，可得到：
+$$
+P(y^{(i)}|\boldsymbol{x}^{(i)}; \boldsymbol{w}) = \frac{1}{\sqrt{2 \pi \sigma^2}}\exp{({-\frac{(y^{(i)} - \boldsymbol{w}^\top \boldsymbol{x}^{(i)})^2}{2 \sigma^2}})}
+$$
+上式表示给定$\boldsymbol{x}^{(i)}$，$y^{(i)}$的概率分布。$\boldsymbol{w}$并不是随机变量，而是一个参数，所以用$;$分号隔开。或者说$\boldsymbol{w}$和$\boldsymbol{x}^{(i)}$不是同一类变量，需要分开单独理解。$P(y^{(i)}|\boldsymbol{x}^{(i)}, \boldsymbol{w})$则有完全不同的意义，表示$\boldsymbol{x}^{(i)}$和$\boldsymbol{w}$同时发生时，$y^{(i)}$的概率分布。
+
+
+前文提到，似然函数是所观察到的各个样本发生的概率的乘积。一组样本有$m$个观测数据，其中单个观测数据发生的概率为刚刚得到的公式，$m$个观测数据的乘积如下所示。
+$$
+L(\boldsymbol{w}) = L(\boldsymbol{w}; \boldsymbol{X}, \boldsymbol{y}) = \prod_{i=1}^{m}P(y^{(i)}|\boldsymbol{x}^{(i)}; \boldsymbol{w})
+$$
+
+最终，似然函数可以表示成：
+$$
+L(\boldsymbol{w}) = \prod_{i=1}^{m} \frac{1}{\sqrt{2 \pi \sigma^2}}\exp{({-\frac{(y^{(i)} - \boldsymbol{w}^\top \boldsymbol{x}^{(i)})^2}{2 \sigma^2}})}
+$$
+
+
+其中，$\boldsymbol{x}^{(i)}$和$y^{(i)}$都是观测到的真实数据，是已知的，$\boldsymbol{w}$是需要去求解的模型参数。
+
+给定一组观测数据$\boldsymbol{X}$和$\boldsymbol{y}$，如何选择参数$\boldsymbol{w}$来使模型达到最优的效果？最大似然估计法告诉我们应该选择一个$\boldsymbol{w}$，使得似然函数$L$最大。$L$中的乘积符号和$\exp$运算看起来就非常复杂，直接用$L$来计算十分不太方便，于是统计学家在原来的似然函数基础上，取了$\log$对数。$\log$的一些性质能大大化简计算复杂程度，且对原来的似然函数增加$\log$对数并不影响参数$w$的最优值。通常使用花体的$\ell$来表示损失函数的对数似然函数。
+$$
+\begin{aligned}
+\ell(\boldsymbol{w}) &= \log\ L(\boldsymbol{w}) \\
+& = \log \ \prod_{i=1}^{m} \frac{1}{\sqrt{2 \pi \sigma^2}}\exp{({-\frac{(y^{(i)} - \boldsymbol{w}^\top \boldsymbol{x}^{(i)})^2}{2 \sigma^2}})} \\
+&= \sum_{i=1}^{m}\log[\frac{1}{\sqrt{2 \pi \sigma^2}}\cdot\exp{({-\frac{(y^{(i)} - \boldsymbol{w}^\top \boldsymbol{x}^{(i)})^2}{2 \sigma^2}})}] \\
+&= \sum_{i=1}^{m}\log[\frac{1}{\sqrt{2 \pi \sigma^2}}] + \sum_{i=1}^{m}\log[\exp{({-\frac{(y^{(i)} - \boldsymbol{w}^\top \boldsymbol{x}^{(i)})^2}{2 \sigma^2}})}] \\
+&= m\log{\frac{1}{\sqrt{2 \pi \sigma^2}}} - \frac{1}{2 \sigma^2}\sum_{i=1}^{m}(y^{(i)} - \boldsymbol{w}^\top \boldsymbol{x^{(i)}})^2
+\end{aligned}
+$$
+
+上面的推导过程主要利用了下面两个公式：
+
+$$
+\log (ab) = \log(a) + \log(b) \\
+\log_e (\exp(a)) = a
+$$
+
+由于$\log$对数可以把乘法转换为加法，似然函数中的乘积项变成了求和项。又因为$\log$对数可以消去幂，最终可以得到上述结果。
+
+由于我们只关心参数$\boldsymbol{w}$取何值时，似然函数最大，标准差$\sigma$并不会影响$\boldsymbol{w}$取何值时似然函数最大，所以可以忽略掉带有标准差$\sigma$的项$m\log{\frac{1}{\sqrt{2 \pi \sigma^2}}}$。再在$-\frac{1}{2 \sigma^2}\sum_{i=1}^{m}(y^{(i)} - \boldsymbol{w}^\top \boldsymbol{x}^{(i)})^2$加个负号，负负得正，原来似然函数$\ell$最大化问题就变成了最小化问题，其实最后还是最小化：
+$$
+\sum_{i=1}^{m}(y^{(i)} - \boldsymbol{w}^\top \boldsymbol{x}^{(i)})^2
+$$
+
+这与最小二乘法所优化的损失函数几乎一样，都是“真实值 - 预测值”的平方和，可以说是殊途同归。
+
+### 最小二乘与最大似然
+
+前面的推导中发现，最小二乘与最大似然的公式几乎一样。直观上来说，最小二乘法是在寻找观测数据与回归超平面之间的误差距离最小的参数。最大似然估计是最大化观测数据发生的概率。当我们假设误差是正态分布的，所有误差项越接近均值0，概率越大。正态分布是在均值两侧对称的，误差项接近均值的过程等同于距离最小化的过程。
+
+## 总结
+
+最大似然估计是机器学习中最常用的参数估计方法之一，逻辑回归、深度神经网络等模型都会使用最大似然估计。我们需要一个似然函数来描述真实数据在不同模型参数下发生的概率，似然函数是关于模型参数的函数。最大似然估计就是寻找最优参数，使得观测数据发生的概率最大、统计模型与真实数据最相似。
