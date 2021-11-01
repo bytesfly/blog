@@ -49,20 +49,35 @@
 
 ## 设计模式
 
-- [代理模式(Proxy Pattern)——对象的间接访问](DesignPattern/proxy-pattern.md)
-- [享元模式(Flyweight Pattern)——实现对象的复用](DesignPattern/flyweight-pattern.md)
-- [中介者模式(Mediator Pattern)——协调多个对象之间的交互](DesignPattern/mediator-pattern.md)
-- [外观模式(Facade Pattern)——提供统一的入口](DesignPattern/facade-pattern.md)
-- [装饰模式(Decorator Pattern)——扩展系统功能](DesignPattern/decorator-pattern.md)
-- [组合模式(Composite Pattern)——树形结构的处理](DesignPattern/composite-pattern.md)
+**创建型模式:**
 - [工厂模式三兄弟(Factory Pattern)](DesignPattern/factory-pattern.md)
-- [建造者模式(Builder Pattern)——复杂对象的组装与创建](DesignPattern/builder-pattern.md)
-- [原型模式(Prototype Pattern)——对象的克隆](DesignPattern/prototype-pattern.md)
 - [单例模式(Singleton Pattern)——确保对象的唯一性](DesignPattern/singleton-pattern.md)
-- [适配器模式(Adapter Pattern)——不兼容结构的协调](DesignPattern/adapter-pattern.md)
-- [迭代器模式(Iterator Pattern)——遍历聚合对象中的元素](DesignPattern/iterator-pattern.md)
+- [原型模式(Prototype Pattern)——对象的克隆](DesignPattern/prototype-pattern.md)
+- [建造者模式(Builder Pattern)——复杂对象的组装与创建](DesignPattern/builder-pattern.md)
 
+**结构型模式:**
+- [适配器模式(Adapter Pattern)——不兼容结构的协调](DesignPattern/adapter-pattern.md)
+- [桥接模式(Bridge Pattern)——处理多维度变化](DesignPattern/bridge-pattern.md)
+- [组合模式(Composite Pattern)——树形结构的处理](DesignPattern/composite-pattern.md)
+- [装饰模式(Decorator Pattern)——扩展系统功能](DesignPattern/decorator-pattern.md)
+- [外观模式(Facade Pattern)——提供统一的入口](DesignPattern/facade-pattern.md)
+- [享元模式(Flyweight Pattern)——实现对象的复用](DesignPattern/flyweight-pattern.md)
+- [代理模式(Proxy Pattern)——对象的间接访问](DesignPattern/proxy-pattern.md)
 - [一文读懂Java中的动态代理](Java/dynamic-proxy-in-java.md)
+
+**行为型模式:**
+- [职责链模式(Chain of Responsibility Pattern)——请求的链式处理](DesignPattern/chain-of-responsibility-pattern.md)
+- [命令模式(Command Pattern)——请求发送者与接收者解耦]()
+- [解释器模式(Interpreter Pattern)——自定义语言的实现]()
+- [迭代器模式(Iterator Pattern)——遍历聚合对象中的元素](DesignPattern/iterator-pattern.md)
+- [中介者模式(Mediator Pattern)——协调多个对象之间的交互](DesignPattern/mediator-pattern.md)
+- [备忘录模式(Memento Pattern)——撤销功能的实现]()
+- [观察者模式(Observer Pattern)——对象间的联动]()
+- [状态模式(State Pattern)——处理对象的多种状态及其相互转换]()
+- [策略模式(Strategy Pattern)——算法的封装与切换]()
+- [模板方法模式(Template Method Pattern)——复杂流程步骤的设计]()
+- [访问者模式(Visitor Pattern)——操作复杂对象结构]()
+
 
 ## 技术调研and问题排查
 
