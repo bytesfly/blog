@@ -157,3 +157,11 @@ tsd.storage.hbase.meta_table = tsdb-meta
 - 启动opentsdb，`systemctl start opentsdb`，成功的话，就可以打开opentsdb的界面了`http://localhost:4242/`
 
 至此，有关opentsdb的安装部署就完成了。后面我会结合opentsdb部分源码分享一些探究性问题。祝君好运！
+
+## 更新
+
+- 2021.11.03 更新
+
+好久没接触opentsdb了，也忘得差不多了，有网友问我为什么启动opentsdb2.4.1失败，我看了下 [https://github.com/OpenTSDB/opentsdb/](https://github.com/OpenTSDB/opentsdb/) ，2021-09-02发布的`OpenTSDB 2.4.1`更新了一些东西：
+![](https://img2020.cnblogs.com/blog/1546632/202111/1546632-20211103122409515-1957344301.png)
+其中官方增加了把opentsdb的服务注册为系统服务的方式，具体见： [https://github.com/OpenTSDB/opentsdb/blob/master/build-aux/rpm/systemd/opentsdb.service](https://github.com/OpenTSDB/opentsdb/blob/master/build-aux/rpm/systemd/opentsdb.service) ，建议按照官方相应的版本部署安装，以免出现问题！

@@ -67,7 +67,7 @@
 
 **行为型模式:**
 - [职责链模式(Chain of Responsibility Pattern)——请求的链式处理](DesignPattern/chain-of-responsibility-pattern.md)
-- [命令模式(Command Pattern)——请求发送者与接收者解耦]()
+- [命令模式(Command Pattern)——请求发送者与接收者解耦](DesignPattern/command-pattern.md)
 - [解释器模式(Interpreter Pattern)——自定义语言的实现]()
 - [迭代器模式(Iterator Pattern)——遍历聚合对象中的元素](DesignPattern/iterator-pattern.md)
 - [中介者模式(Mediator Pattern)——协调多个对象之间的交互](DesignPattern/mediator-pattern.md)

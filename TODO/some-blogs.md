@@ -6,6 +6,10 @@
 
 ## Java
 
+[https://www.graalvm.org/](https://www.graalvm.org/)
+
+[https://quarkus.io/](https://quarkus.io/)
+
 [史上最详细的JDK1.8 HashMap源码解析](https://joonwhee.blog.csdn.net/article/details/78996181?utm_medium=distribute.pc_relevant_t0.none-task-blog-OPENSEARCH-1.control&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-OPENSEARCH-1.control)
 
 ## 开源项目
