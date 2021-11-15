@@ -112,6 +112,10 @@ github镜像：[https://hub.fastgit.org/](https://hub.fastgit.org/)
 
 词云工具：[https://wordart.com/](https://wordart.com/)
 
+毛笔字生成器： [https://www.zhenhaotv.com/](https://www.zhenhaotv.com/)
+
+艺术字体： [https://www.qt86.com/](https://www.qt86.com/)
+
 360查字体：[https://fonts.safe.360.cn/](https://fonts.safe.360.cn/)
 
 代码在线运行：[https://tool.lu/coderunner](https://tool.lu/coderunner)

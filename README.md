@@ -49,6 +49,9 @@
 
 ## 设计模式
 
+- [设计模式概述](DesignPattern/overview.md)
+- [面向对象设计原则](DesignPattern/object-oriented-design-principles.md)
+
 **创建型模式:**
 - [工厂模式三兄弟(Factory Pattern)](DesignPattern/factory-pattern.md)
 - [单例模式(Singleton Pattern)——确保对象的唯一性](DesignPattern/singleton-pattern.md)
@@ -68,7 +71,7 @@
 **行为型模式:**
 - [职责链模式(Chain of Responsibility Pattern)——请求的链式处理](DesignPattern/chain-of-responsibility-pattern.md)
 - [命令模式(Command Pattern)——请求发送者与接收者解耦](DesignPattern/command-pattern.md)
-- [解释器模式(Interpreter Pattern)——自定义语言的实现]()
+- [解释器模式(Interpreter Pattern)——自定义语言的实现](DesignPattern/interpreter-pattern.md)
 - [迭代器模式(Iterator Pattern)——遍历聚合对象中的元素](DesignPattern/iterator-pattern.md)
 - [中介者模式(Mediator Pattern)——协调多个对象之间的交互](DesignPattern/mediator-pattern.md)
 - [备忘录模式(Memento Pattern)——撤销功能的实现]()
