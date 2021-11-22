@@ -91,6 +91,8 @@ flink-ecosystem：[https://flink-packages.org/](https://flink-packages.org/)
 
 API 文档、调试、Mock、测试一体化协作平台：[https://www.apifox.cn](https://www.apifox.cn)
 
+新一代效率工具平台: [https://u.tools/](https://u.tools/)
+
 
 ### 软件下载
 
@@ -109,6 +111,8 @@ github加速下载：[https://gh.msx.workers.dev/](https://gh.msx.workers.dev/)
 github镜像：[https://hub.fastgit.org/](https://hub.fastgit.org/)
 
 ### 在线工具
+
+截取并合并音乐： [https://audio-joiner.com/cn/](https://audio-joiner.com/cn/)
 
 词云工具：[https://wordart.com/](https://wordart.com/)
 

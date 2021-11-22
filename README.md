@@ -1,6 +1,7 @@
 
 ## Java
 
+- [MyBatis-Plus中如何使用ResultMap](Java/resultmap-in-mybatis-plus.md)
 - [换种思路写Mock，让单元测试更简单](Java/testable-mock.md)
 - [一文读懂Java中的动态代理](Java/dynamic-proxy-in-java.md)
 - [云原生时代的Java](Java/java-in-the-future.md)
