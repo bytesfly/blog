@@ -110,6 +110,8 @@ github加速下载：[https://gh.msx.workers.dev/](https://gh.msx.workers.dev/)
 
 github镜像：[https://hub.fastgit.org/](https://hub.fastgit.org/)
 
+PPT模板：[https://www.ypppt.com/](https://www.ypppt.com/)
+
 ### 在线工具
 
 截取并合并音乐： [https://audio-joiner.com/cn/](https://audio-joiner.com/cn/)
@@ -178,9 +180,9 @@ LOGO设计-丢盖网：[http://www.diugai.com/](http://www.diugai.com/)
 
 查看域名最快响应IP：[https://www.ipaddress.com/](https://www.ipaddress.com/)
 
-### 其他
+### 趋势
 
-新一代多系统启动U盘解决方案: [https://www.ventoy.net/](https://www.ventoy.net/)
+stackoverflow技术趋势： [https://insights.stackoverflow.com/trends](https://insights.stackoverflow.com/trends)
 
 百度指数：[http://index.baidu.com/v2/index.html](http://index.baidu.com/v2/index.html)
 
@@ -189,6 +191,8 @@ LOGO设计-丢盖网：[http://www.diugai.com/](http://www.diugai.com/)
 github热门：[https://github.com/trending](https://github.com/trending)
 
 ## 工具
+
+新一代多系统启动U盘解决方案: [https://www.ventoy.net/](https://www.ventoy.net/)
 
 ### Mac
 
